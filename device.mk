@@ -271,10 +271,8 @@ NANOHUB_SENSORHAL_DIRECT_REPORT_ENABLED := true
 PRODUCT_PACKAGES += \
     sensors.angler \
     activity_recognition.angler \
-    context_hub.default \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-impl:64 \
-    android.hardware.contexthub@1.0-impl.nanohub:64
+    android.hardware.contexthub@1.0-impl.nanohub
 
 # new gatekeeper HAL
 PRODUCT_PACKAGES += \
