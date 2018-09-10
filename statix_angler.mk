@@ -23,6 +23,9 @@ $(call inherit-product, device/huawei/angler/angler.mk)
 # Inherit statix's custom configuration
 $(call inherit-product, $(TOPDIR)vendor/statix/config/common.mk)
 
+# Inherit GSM configuration
+$(call inherit-product, $(TOPDIR)vendor/statix/config/gsm.mk)
+
 # Screen Resolution for the Bootanimation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
