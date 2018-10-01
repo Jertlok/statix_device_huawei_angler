@@ -696,7 +696,8 @@
     </carrier_config>
 
     <carrier_config mcc="310" mnc="260">
-        <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="carrier_volte_available_bool" value="false" />
+        <!--<boolean name="carrier_allow_turnoff_ims_bool" value="false" /> -->
     </carrier_config>
 
     <carrier_config mcc="310" mnc="410">
@@ -704,6 +705,7 @@
     </carrier_config>
 
     <carrier_config mcc="311" mnc="480">
+        <boolean name="carrier_volte_available_bool" value="false" />
         <boolean name="ci_action_on_sys_update_bool" value="true" />
         <string name="ci_action_on_sys_update_extra_string">ServerID</string>
         <string name="ci_action_on_sys_update_intent_string">com.android.omadm.service.CONFIGURATION_UPDATE</string>
