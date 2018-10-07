@@ -444,11 +444,8 @@ service cnd /vendor/bin/cnd
     group root wakelock
     writepid /dev/cpuset/system-background/tasks
 
-on property:ro.boot.hardware.revision=ANGLER-V1
-    write /sys/module/bcmdhd/parameters/nvram_path \
-	      /system/etc/wifi/bcmdhd-pme.cal
-
-on property:ro.boot.hardware.revision=ANGLER-V2
+# Initialise nvram for all angler revisions
+on property:ro.boot.hardware.revision=*
     write /sys/module/bcmdhd/parameters/nvram_path \
 	      /system/etc/wifi/bcmdhd-pme.cal
 
