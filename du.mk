@@ -21,17 +21,21 @@
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
 # Inherit statix's custom configuration
-$(call inherit-product, $(TOPDIR)vendor/statix/config/common.mk)
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Screen Resolution for the Bootanimation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
-PRODUCT_NAME := statix_angler
+PRODUCT_NAME := du_angler
 PRODUCT_DEVICE := angler
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
+
+# DU updater prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.du.updater=angler
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
