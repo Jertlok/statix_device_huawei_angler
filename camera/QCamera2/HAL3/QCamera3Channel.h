@@ -247,6 +247,7 @@ public:
                     QCamera3Channel *metadataChannel,
                     uint32_t numBuffers = MAX_INFLIGHT_REQUESTS);
 
+    using QCamera3ProcessingChannel::request;
     virtual ~QCamera3RegularChannel();
 
     virtual int32_t setBatchSize(uint32_t batchSize);
@@ -377,6 +378,7 @@ public:
             cam_stream_type_t stream_type,
             uint32_t postprocess_mask,
             QCamera3Channel *metadataChannel);
+    using QCamera3ProcessingChannel::request;
     ~QCamera3YUVChannel();
     virtual int32_t initialize(cam_is_type_t isType);
     virtual int32_t request(buffer_handle_t *buffer,
